@@ -1,0 +1,28 @@
+﻿@model IEnumerable<project4.Models.Book>
+@{
+}
+<h3>Список дисков</h3>
+
+<form method="get" action="/Cd/Cd/">
+    <input type="text" value="" name="text" />
+    <input type="submit" value="Поиск" />
+</form>
+<div>
+    <table width="100%" class="table-condensed">
+  
+        <tr>
+            <td>Название</td>
+            <td></td>
+        </tr>
+        @foreach (var disc in Model) {
+
+            <tr>
+                <td>@disc.Name</td>
+                <td><a href="~/CD/Edit/@disc.ID">Редактировать</a></td>
+                <td><a href="~/Cd/Delete/@disc.ID">Удалить</a></td>
+                <td><a href="~/Cd/Detail/@disc.ID">Детали</a></td>
+            </tr>
+        }
+    </table>
+<p><a href="~/Cd/Add/">Добавить</a></p>
+</div>

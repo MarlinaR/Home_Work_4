@@ -1,0 +1,25 @@
+﻿@model project4.Models.Artist
+
+@{
+    ViewBag.Title = "Детали";
+}
+
+<h2>Детали</h2>
+
+<div>
+    <hr />
+    <table width="100%" class="table-condensed">
+        <tr>
+            <td>ID</td>
+            <td>Название</td>
+            <td>Страна</td>
+        </tr>
+        <tr>
+            <td> @ViewBag.ID</td>
+            <td>@ViewBag.Name</td>
+            <td>@ViewBag.Country</td>
+        </tr>
+    </table>
+</div>
+<p>
+<p><a href="~/Artist/Artist/">Вернуться к списку исполнителей</a></p>

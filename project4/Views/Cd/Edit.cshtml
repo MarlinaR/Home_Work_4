@@ -1,0 +1,34 @@
+﻿@model project4.Models.Book
+
+@{
+    ViewBag.Title = "Редактировать";
+}
+
+
+
+<div>
+    <h4>Редактировать</h4>
+    <hr />
+    <form method="post">
+        <table width="100%">
+            <tr>
+                <td>Название:</td>
+                <td><input type="text" value=@ViewBag.Name name="Name" /> </td>
+            </tr>
+            <tr>
+                <td>Исполнитель:</td>
+                <td><input type="text" value=@ViewBag.Artist name="Artist" /></td>
+            </tr>
+            <tr>
+                <td>Количество:</td>
+                <td><input type="text" value=@ViewBag.Count name="Count" /></td>
+            </tr>
+            <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+        </table>
+
+    </form>
+    <p><a href="~/Cd/Cd/">Вернуться к каталогу книг</a></p>
+</div>
+<p>
+
+

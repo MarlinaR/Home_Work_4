@@ -1,0 +1,31 @@
+﻿@model project4.Models.Book
+
+@{
+    ViewBag.Title = "Добавить диск";
+}
+
+<!DOCTYPE html>
+
+<div>
+    <h3>Добавить диск</h3>
+    <form method="post">
+        <input type="hidden" name=3 />
+        <table width="100%">
+            <tr>
+                <td>Название:</td>
+                <td><input type="text" name="Name" /> </td>
+            </tr>
+            <tr>
+                <td>Исполнитель:</td>
+                <td><input type="text" name="Artist" /></td>
+            </tr>
+            <tr>
+                <td>Количество:</td>
+                <td><input type="text" name="Count" /></td>
+            </tr>
+            <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+        </table>
+    </form>
+</div>
+<p><a href="~/Cd/Cd/">Вернуться к каталогу книг</a></p>
+
