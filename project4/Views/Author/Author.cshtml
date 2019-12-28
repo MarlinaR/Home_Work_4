@@ -1,11 +1,11 @@
-﻿@model IEnumerable<project4.Models.Artist>
+﻿@model IEnumerable<project4.Models.Author>
 @{
     ViewData["Title"] = "Список исполнителей";
 }
 
 <h1>Список исполнителей</h1>
 
-<form method="get" action="/Artist/Artist/">
+<form method="get" action="/Author/Author/">
     <input type="text" value="" name="text" />
     <input type="submit" value="Поиск" />
 </form>
@@ -19,10 +19,10 @@
 
         <tr>
             <td>@artist.Name</td>
-            <td><a href="~/Artist/Edit/@artist.ID">Редактировать</a></td>
-            <td><a href="~/Artist/Delete/@artist.ID">Удалить</a></td>
-            <td><a href="~/Artist/Detail/@artist.ID">Детали</a></td>
+            <td><a href="~/Author/Edit/@artist.ID">Редактировать</a></td>
+            <td><a href="~/Author/Delete/@artist.ID">Удалить</a></td>
+            <td><a href="~/Author/Detail/@artist.ID">Детали</a></td>
         </tr>
     }
 </table>
-<p><a href="~/Artist/Add/">Добавить</a></p>
+<p><a href="~/Author/Add/">Добавить</a></p>

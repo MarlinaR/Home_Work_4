@@ -15,16 +15,16 @@ using System.Net;
 
 namespace project4.Controllers
 {
-    public class ArtistController : Controller
+    public class AuthorController : Controller
     {
         BookContext db;
-        public ArtistController(BookContext context)
+        public AuthorController(BookContext context)
         {
             db = context;
         }
 
 
-        public IActionResult Artist(string? text)
+        public IActionResult Author(string? text)
         {
             if (text != null && text.Trim() != "") {
                 var artists = db.Authors
@@ -63,7 +63,7 @@ namespace project4.Controllers
             }
             db.Authors.Remove(db.Authors.Find(ID));
             db.SaveChanges();
-            return Redirect("/Artist/Artist");
+            return Redirect("/Authors/Author");
         }
 
         public IActionResult Detail(int? ID)
@@ -113,7 +113,7 @@ namespace project4.Controllers
             artist2.Name = artist.Name;
             db.SaveChanges();
 
-            return Redirect("/Artist/Artist");
+            return Redirect("/Author/Author");
         }
 
     }

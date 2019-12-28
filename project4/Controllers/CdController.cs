@@ -29,7 +29,7 @@ namespace project4.Controllers
             if (text != null && text.Trim() != "") {
                 var discs = db.Books
                 .Where(c => c.Name.Contains(text) ||
-                    c.Artist.Contains(text) ||
+                    c.Author.Contains(text) ||
                     c.ID.ToString().Contains(text) ||
                     c.Count.ToString().Contains(text));
 
@@ -81,7 +81,7 @@ namespace project4.Controllers
             ViewBag.Name = disc.Name;
             ViewBag.ID = disc.ID;
             ViewBag.Count = disc.Count;
-            ViewBag.Artist = disc.Artist;
+            ViewBag.Author = disc.Author;
 
             return View();
         }
@@ -99,7 +99,7 @@ namespace project4.Controllers
             ViewBag.Name = disc.Name;
             ViewBag.ID = disc.ID;
             ViewBag.Count = disc.Count;
-            ViewBag.Artist = disc.Artist;
+            ViewBag.Author = disc.Author;
 
             return View();
         }
@@ -112,7 +112,7 @@ namespace project4.Controllers
             }
 
             Book disc2 = db.Books.Find(disc.ID);
-            disc2.Artist = disc.Artist;
+            disc2.Author = disc.Author;
             disc2.Name = disc.Name;
             disc2.Count = disc.Count;
             db.SaveChanges();

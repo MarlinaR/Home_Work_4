@@ -15,20 +15,20 @@ namespace project4.Models
                     new Book
                     {
                         Name = "Red",
-                        Artist = "FireGuy",
+                        Author = "FireGuy",
                         Count = 6
                     },
                     new Book
                     {
                         Name = "Black",
-                        Artist = "NiggaGuy",
+                        Author = "NiggaGuy",
                         Count = 10
                     },
                     new Book
                     {
    
                         Name = "Yellow",
-                        Artist = "SunGuy",
+                        Author = "SunGuy",
                         Count = 12
                     }
                 ); 

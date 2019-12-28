@@ -9,7 +9,7 @@ namespace project4.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string Artist { get; set; }
+        public string Author { get; set; }
         public int Count { get; set; }
     }
 }
